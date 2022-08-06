@@ -1,12 +1,6 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
-import Alert from './../src/components/Alert';
+import {Alert} from './../src/components/Alert/index';
 import { Row, Col, Alert as RBAlert } from 'react-bootstrap';
-
-const themeSettings = {
-    primary: 'rgb(204, 229, 255)',
-    secondary: 'rgb(226, 227, 229)',
-}
 
 const Task01 = () => {
     return (
@@ -16,9 +10,7 @@ const Task01 = () => {
                 <RBAlert variant="primary">Uwaga! <em>Styled Components</em> nadchodzi!</RBAlert>
             </Col>
             <Col>
-                <ThemeProvider theme={themeSettings}>
-                    <Alert variant="primary" >Uwaga! <em>Styled Components</em> nadchodzi!</Alert>
-                </ThemeProvider>
+                <Alert variant="primary">Uwaga! <em>Styled Components</em> nadchodzi!</Alert>
             </Col>
         </Row>
         </>
